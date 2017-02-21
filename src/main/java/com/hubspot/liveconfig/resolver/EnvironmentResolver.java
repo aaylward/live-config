@@ -4,7 +4,6 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.CaseFormat;
 import com.google.common.collect.Maps;
 
-import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 
@@ -28,7 +27,7 @@ public class EnvironmentResolver extends ForwardingMapResolver {
 
   @Override
   public Set<String> keySet() {
-    return Collections.emptySet();
+    return envMap.keySet();
   }
 
   private static Map<String, String> transformEnvMap(Map<String, String> envMap) {

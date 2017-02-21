@@ -1,11 +1,11 @@
 package com.hubspot.liveconfig.resolver;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Sets;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Collections;
 import java.util.Map;
 
 public class EnvironmentResolverTest {
@@ -27,7 +27,7 @@ public class EnvironmentResolverTest {
 
   @Test
   public void testKeySet() {
-    Assert.assertEquals(Collections.<String>emptySet(), resolver.keySet());
+    Assert.assertEquals(Sets.newHashSet("build.info"), resolver.keySet());
   }
 
 }
